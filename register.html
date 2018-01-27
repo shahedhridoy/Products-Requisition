@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="card">
+    <form class="login-form" method="post" action="api/register.php">
+
+        <!--Role-->
+        <select name="role" title="" class="form-drop-down" required>
+            <option value="role" selected hidden disabled>Role</option>
+            <option value="admin">Admin</option>
+            <option value="regional-manager">Regional Manager</option>
+            <option value="zonal-in-charge">Zonal In Charge</option>
+            <option value="area-in-charge">Area In Charge</option>
+            <option value="territory-in-charge">Territory In Charge</option>
+            <option value="accounts">Accounts Officer</option>
+            <option value="sales-representative">Sales Representative</option>
+        </select>
+
+        <!--Distributor-->
+        <select name="distributor" title="" class="form-drop-down" required>
+            <option value="distributor" selected hidden disabled>Distributor</option>
+            <option value="aktl-satkania">AKTL (Satkania)</option>
+            <option value="aktl-lohagara">AKTL (Lohagara)</option>
+            <option value="aktl-chakaria">AKTL (Chakaria)</option>
+        </select>
+
+        <!--Username-->
+        <input name="username" type="text" class="form-control" placeholder="Username" required>
+
+        <!--Mobile-->
+        <input name="mobile" type="text" class="form-control" placeholder="Mobile No" required maxlength="11"
+               minlength="11">
+
+        <!--Password-->
+        <input name="password" type="password" class="form-control" placeholder="Password" required>
+
+        <!--Confirm Password-->
+        <input name="confirm-password" type="password" class="form-control" placeholder="Confirm Password" required>
+
+        <!--Submit Button-->
+        <input type="submit" class="login-button" value="Register">
+    </form>
+</div>
+</body>
+</html>
